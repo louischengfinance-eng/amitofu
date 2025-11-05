@@ -1,0 +1,30 @@
+{
+  "name": "amitofu",
+  "version": "1.0.0",
+  "description": "奇門遁甲算命系統 - Qimen Dunjia Divination System",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "test": "jest",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "qimen",
+    "dunjia",
+    "divination",
+    "chinese-metaphysics",
+    "八卦",
+    "奇門遁甲"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0"
+  }
+}
