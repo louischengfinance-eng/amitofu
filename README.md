@@ -31,6 +31,26 @@
 
 ## 📦 安裝
 
+### 方法一：Docker 部署（推薦，最簡單）🐳
+
+```bash
+# 一鍵部署
+docker-compose up -d
+
+# 訪問網頁
+瀏覽器打開：http://localhost:3000
+```
+
+**優點**：
+- ✅ 無需安裝 Node.js
+- ✅ 一條命令搞定
+- ✅ 環境隔離，不影響系統
+- ✅ 隨時啟動/停止
+
+詳見 [Docker部署指南](./DOCKER部署指南.md) 或運行 `./快速部署.sh`
+
+### 方法二：傳統方式安裝
+
 ```bash
 npm install
 npm run build
