@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  fortune-telling:
+    container_name: amitofu-fortune-telling
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: amitofu-fortune-telling:latest
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - fortune-network
+    labels:
+      - "com.amitofu.description=阿彌陀佛算命系統"
+      - "com.amitofu.version=2.0.0"
+
+networks:
+  fortune-network:
+    driver: bridge

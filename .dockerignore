@@ -1,0 +1,40 @@
+# Node modules
+node_modules
+npm-debug.log
+
+# Git
+.git
+.gitignore
+
+# 編譯輸出（會在容器內重新編譯）
+dist
+
+# 文檔和示例（不需要在容器內）
+*.md
+examples
+demo-preview.js
+my-fortune.js
+
+# IDE 配置
+.vscode
+.idea
+*.swp
+*.swo
+
+# 測試文件
+tests
+*.test.js
+*.spec.js
+
+# 環境變量
+.env
+.env.local
+
+# 臨時文件
+tmp
+temp
+*.log
+
+# OS 文件
+.DS_Store
+Thumbs.db
